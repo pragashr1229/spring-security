@@ -50,12 +50,30 @@ public class SecurityApp3Application2 implements CommandLineRunner {
 	public String getMessage4() {
 		return "SecurityApp3Application2 - test4";
 	}
-	
-	@GetMapping("/test5")
-	public String getMessage5() {
-		return "SecurityApp3Application2 - test5";
-	}
 
+	
+	@GetMapping("/test1/a1")
+	public String test11() {
+		System.out.println("from test11");
+		return "from test11/a1";
+	}
+	@GetMapping("/test1/b1")
+	public String test12() {
+		System.out.println("from test12");
+		return "from test11/b1";
+	}
+	
+	@GetMapping("/test1/hello/a1")
+	public String test13() {
+		System.out.println("from test12");
+		return "from test11/hello/a1";
+	}	
+	@GetMapping("/test1/hello")
+	public String test14() {
+		System.out.println("from test12");
+		return "from test11/hello/";
+	}
+	
 	@Override
 	public void run(String... args) throws Exception {
 			Person p = new Person();
